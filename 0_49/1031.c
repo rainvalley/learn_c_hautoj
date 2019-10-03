@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+    int x,y;
+    scanf("%d %d",&x,&y);
+    if (x>0&&y>0)
+    {
+        printf("1");/* code */
+    }
+    if (x<0&&y>0)
+    {
+        printf("2");
+    }
+    if (x<0&&y<0)
+    {
+        printf("3");/* code */
+    }
+    if (x>0&&y<0)
+    {
+        printf("4");
+    }
+    return 0;
+}
