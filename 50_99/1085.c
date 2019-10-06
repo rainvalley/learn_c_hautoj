@@ -2,20 +2,20 @@
 int main()
 {
     int i,n,m,s;
-    s=1;
-    while (scanf("%d",&n),n!=EOF)
+    while (scanf("%d\n",&n)!=EOF)
     {
-        for ( i = 0; i < n; i++)
+        s=1;
+        for ( i = 1; i <= n; i++)
         {
-            if (n%2!=0)
+            scanf("%d",&m);
+            if (m%2!=0)
             {
-                s=s*n;
+                s=s*m;
             }
             
         }
-        printf("%d ",s);
-        s=1;
-        
+        printf("%d\n",s);
+
     }
     return 0;
 }
