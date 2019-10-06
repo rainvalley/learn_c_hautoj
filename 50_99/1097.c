@@ -1,35 +1,32 @@
 #include<stdio.h>
+double grade(char x);
 int main()
 {
+    int i;
+    double a;
     char x;
-    int i,y;
-    double z;
-    y=0;
-    for ( i = 1;scanf("%c",&x)!=EOF; i++)
+    i=0;
+    a=0.0;
+    while ((x=getchar())!='\n')
     {
-        if (x=='A')
-        {
-            y=y+95;
-        }
-        else if (x=='B')
-        {
-            y=y+85;
-        }
-        else if (x=='C')
-        {
-            y=y+75;
-        }
-        else if (x=='D')
-        {
-            y=y+65;
-        }
-        else if (x=='E')
-        {
-            y=y+40;
-        }
-        
+        a=a+grade(x);
+        i++;
     }
-    z=(1.0*y)/i;
-    printf("%d",z);
-    return z;
+    a=(1.0*a)/i;
+    printf("%.1lf",a);
+    return 0;
+    
+}
+double grade(char x)
+{
+    double a;
+    switch (x)
+    {
+            case 'A':a=95;break;
+            case 'B':a=85;break;
+            case 'C':a=75;break;
+            case 'D':a=65;break;
+            case 'E':a=40;break;
+    }
+    return a;
 }
